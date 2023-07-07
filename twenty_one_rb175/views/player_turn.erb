@@ -1,0 +1,10 @@
+<%= prompt @dealer.first_card_msg %>
+<%= prompt @player.hand_msg %>
+
+<%= prompt("Please choose if you want to 'hit' or 'stay'.") %>
+<form class="inline" action="/player/hit" method="POST">
+  <button type="submit">Hit</button>
+</form>
+<form class="inline" action="/player/stay" method="POST">
+  <button type="submit">Stay</button>
+</form>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Twenty-One</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/twenty_one.css">
+  </head>
+  <body>
+    <% if session[:message] %>
+      <p class="message"><%= session.delete(:message) %></p>
+    <% end %>
+    
+    <%= prompt @deck.size_msg %>
+
+    <%= yield %>
+  </body>
+</html>

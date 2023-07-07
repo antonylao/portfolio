@@ -1,0 +1,29 @@
+.message {
+  white-space: pre-line;
+  padding: 10px;
+  background-color: #FFFF99;
+}
+
+.inline {
+  display: inline;
+}
+
+.line-breaks {
+  white-space: pre-line;
+}
+
+.results {
+  padding: 10px;
+}
+
+.player-win {
+  border: medium dashed green;
+}
+
+.dealer-win {
+  border: medium dashed red;
+}
+
+.tie {
+  border: medium dashed orange;
+}

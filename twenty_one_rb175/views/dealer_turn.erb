@@ -1,0 +1,6 @@
+<%= prompt @player.hand_msg %>
+<%= prompt @dealer.hand_msg %>
+
+<form action="/dealer/hit" method="POST">
+  <button type="submit">Click to reveal next card</button>
+</form>
