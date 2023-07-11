@@ -1,0 +1,52 @@
+<ul>
+  <% @files.each do |file| %>
+    <li>
+      <a href="/<%= file %>">
+        <%= file %><!--
+   --></a>
+      <a href="/<%= file %>/edit">Edit</a>
+      <a href="/<%= file %>/history">View History</a>
+      <form class="inline" action="/<%= file %>/delete" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+      <form class="inline" action="/<%= file %>/duplicate" method="POST">
+        <button type="submit">Duplicate</button>
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<% unless list_only_files(pictures_path).empty? %>
+  <p>Pictures:</p>
+  <ul>
+    <% @pictures.each do |picture| %>
+      <li>
+        <a href="/<%= picture %>">
+          <%= picture %><!--
+    --></a>
+        <form class="inline" action="/picture/<%= picture %>/delete" method="POST">
+        <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+<% end %> 
+
+<p><a href="/new">New Document</a></p>
+<form action="/upload_picture" enctype="multipart/form-data" method="POST">
+    <label for="picture">Upload a picture:</label>
+    <input name="picture" type="file" accept="image/*" value="Browse">
+    <input type="submit" value="Upload">
+</form>
+
+<% if session[:signed_in] %>
+  <form action="/users/signout" method="POST">
+    <p class="user-status">
+      Signed in as <%= session[:username] %>.
+      <button type="submit">Sign Out</button>
+    </p>
+  </form>
+<% else %>
+  <p class="user-status"><a href="/users/signin">Sign In</a></p>
+  <p class="user-status"><a href="/users/signup">Sign Up</a></p>
+<% end %>

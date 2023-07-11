@@ -1,0 +1,10 @@
+<ul>
+  <% @last_yaml_key.downto(0) do |key| %>
+    <li>
+      <% history_filename = @history_order[key] %>
+      <a href="/<%= @filename %>/history/<%= history_filename %>">
+        <%= history_filename %><!--
+   --></a>
+    </li>
+  <% end %>
+</ul>

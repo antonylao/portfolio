@@ -1,0 +1,6 @@
+1) Adding Gemfile on the root folder
+2) Running `bundle install`
+3) Create the "data" folder
+4) Adding "cms.rb" on the root folder
+5) Create the "view" folder, with view templates inside
+6) Create the "test" folder, with "cms_test.rb" inside

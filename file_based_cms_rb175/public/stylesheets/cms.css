@@ -1,0 +1,19 @@
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.message {
+  white-space: pre-line;
+  padding: 10px;
+  background-color: #FFFF99;
+}
+
+.inline {
+  display: inline;
+}
+
+.user-status {
+  font-style: italic;
+  font-size: 0.9em;
+}
