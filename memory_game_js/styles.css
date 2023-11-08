@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+
+button {
+  background-color: rgb(255, 203, 14);
+}
+
